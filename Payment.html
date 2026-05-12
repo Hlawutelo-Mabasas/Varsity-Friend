@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varsity Friend</title>
+    <link rel="icon" type="image/png" href="https://github.com/Hlawutelo-Mabasas/Varsity-Friend/blob/main/icon.png?raw=true">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="navbar-left">
+            <a href="index.html" class="navbar-brand">
+                <img src="https://github.com/Hlawutelo-Mabasas/Varsity-Friend/blob/main/icon.png?raw=true" alt="Varsity-Friend Logo" class="Logo">
+            </a>
+            <span class="separater"></span>
+            <a href="bursary.html" class="nav-item">Bursaries</a>
+            <span class="separater"></span>
+            <a href="Universities.html" class="nav-item">Universities</a>
+        </div>
+        <div class="navbar-right">
+            <a href="help-apply.html" class="nav-item">Help Apply</a>
+            <span class="separater"></span>
+            <a href="Payment.html" class="nav-item">Payment</a>
+        </div>
+        <style>
+        .payment-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .payment-header {
+            margin-bottom: 30px;
+        }
+
+        .payment-header h1 {
+            color: #002147;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .payment-header p {
+            color: #555;
+            font-size: 18px;
+        }
+
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        .pricing-table th,
+        .pricing-table td {
+            border: 1px solid #eee;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .pricing-table th {
+            background-color: #f0f4f8;
+            color: #002147;
+            font-weight: bold;
+        }
+
+        .pricing-table td {
+            color: #333;
+        }
+
+        .pricing-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .bank-details-section {
+            margin-top: 30px;
+            padding: 20px;
+            border: 1px dashed #d4af37;
+            border-radius: 8px;
+            background-color: #fffdf5;
+            text-align: left;
+        }
+
+        .bank-details-section h2 {
+            color: #002147;
+            font-size: 24px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .bank-details-section p {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .bank-details-section strong {
+            color: #002147;
+        }
+
+        .payment-instructions {
+            margin-top: 20px;
+            font-size: 15px;
+            color: #555;
+            text-align: center;
+        }
+
+        .payment-instructions ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .payment-instructions li {
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 600px) {
+            .payment-container {
+                margin: 20px auto;
+                padding: 15px;
+            }
+            .payment-header h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+
+    </header>
+    <main class="payment-container">
+        <div class="payment-header">
+            <h1>Secure Your Assisted Application</h1>
+            <p>Choose your service and make a payment via EFT (Electronic Funds Transfer).</p>
+        </div>
+
+        <table class="pricing-table">
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Price (ZAR)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>University Application Assistance (1 application)</td>
+                    <td>R20.00</td>
+                </tr>
+                <tr>
+                    <td>University Application Assistance (5 applications)</td>
+                    <td>R60.00</td>
+                </tr>
+                <tr>
+                    <td>Bursary Application Assistance (1 application)</td>
+                    <td>R30.00</td>
+                </tr>
+                <tr>
+                    <td>Bursary Application Assistance (5 applications)</td>
+                    <td>R90.00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="bank-details-section">
+            <h2>Bank Details for EFT Payment</h2>
+            <p><strong>Bank Name:</strong> Capitec</p>
+            <p><strong>Account Holder:</strong> Varsity Friend</p>
+            <p><strong>Account Number:</strong> 2541683592</p>
+            <p><strong>Branch Code:</strong> 470010</p>
+        </div>
+
+        <div class="payment-instructions">
+            <p><strong>Important Payment Instructions:</strong></p>
+            <ul>
+                <li>1. Please use your **Full Name and Surname** as the payment reference.</li>
+                <li>2. After making your payment, please upload your **Proof of Payment** on the <a href="help-apply.html">Help Apply</a> page.</li>
+                <li>3. Your application process will only begin once payment and proof of payment are received.</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 40px; color: #666; font-size: 14px;">
+        &copy; 2026 Varsity Friend. Empowering your academic journey.
+    </footer>
+</body>
+</html>
