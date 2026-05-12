@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varsity Friend</title>
+    <link rel="icon" type="image/png" href="https://github.com/Hlawutelo-Mabasas/Varsity-Friend/blob/main/icon.png?raw=true">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Specific styles for the Help Apply page */
+        .apply-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .apply-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .apply-header h1 {
+            color: #002147;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .apply-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .apply-form input[type="text"],
+        .apply-form input[type="email"],
+        .apply-form input[type="tel"],
+        .apply-form input[type="file"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .apply-form input[type="file"] {
+            padding: 5px;
+        }
+
+        .apply-form .file-upload-section {
+            margin-bottom: 20px;
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .apply-form .file-upload-section label {
+            font-weight: normal;
+            margin-bottom: 5px;
+        }
+
+        .apply-form .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #d4af37; /* Gold color */
+            color: #002147; /* Navy text */
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .apply-form .submit-btn:hover {
+            background-color: #c0a02d; /* Darker gold */
+        }
+
+        .form-note {
+            font-size: 14px;
+            color: #666;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .apply-container {
+                margin: 20px auto;
+                padding: 15px;
+            }
+            .apply-header h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="navbar-left">
+            <a href="home.html" class="navbar-brand">
+                <img src="https://github.com/Hlawutelo-Mabasas/Varsity-Friend/blob/main/icon.png?raw=true" alt="Varsity-Friend Logo" class="Logo">
+            </a>
+            <span class="separater"></span>
+            <a href="bursary.html" class="nav-item">Bursaries</a>
+            <span class="separater"></span>
+            <a href="Universities.html" class="nav-item">Universities</a>
+        </div>
+        <div class="navbar-right">
+            <a href="help-apply.html" class="nav-item">Help Apply</a>
+            <span class="separater"></span>
+            <a href="Payment.html" class="nav-item">Payment</a>
+        </div>
+
+    </header>
+     <main class="apply-container">
+        <div class="apply-header">
+            <h1>Assisted Application Service</h1>
+            <p>Let Varsity Friend handle your university and bursary applications.</p>
+        </div>
+
+        <form action="https://formsubmit.co/mabasas.hlawutelo@gmail.com" method="POST" enctype="multipart/form-data" class="apply-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="whatsapp">WhatsApp Number:</label>
+            <input type="tel" id="whatsapp" name="whatsapp" placeholder="+27 12 345 6789" required>
+
+            <div class="file-upload-section">
+                <label>Upload Required Documents:</label>
+                <p style="font-size: 12px; color: #888; margin-bottom: 10px;">Please upload certified copies only. Max file size 10MB per file.</p>
+
+                <label for="certified_id">Certified ID:</label>
+                <input type="file" id="certified_id" name="Certified ID" accept=".pdf,.jpg,.jpeg,.png" required>
+
+                <label for="results">Certified Grade 11 or 12 Results:</label>
+                <input type="file" id="results" name="Certified Grade 11/12 Results" accept=".pdf,.jpg,.jpeg,.png" required>
+
+                <label for="parents_id">Parents' Certified ID (if less than 18 years old):</label>
+                <input type="file" id="parents_id" name="Parents ID (if under 18)" accept=".pdf,.jpg,.jpeg,.png">
+
+                <label for="proof_of_payment">Proof of Payment:</label>
+                <input type="file" id="proof_of_payment" name="Proof of Payment" accept=".pdf,.jpg,.jpeg,.png" required>
+            </div>
+
+            <input type="hidden" name="_subject" value="Application from Varsity Friend">
+            <input type="hidden" name="_captcha" value="false"> <!-- Disable captcha for easier testing, enable for production -->
+
+            <button type="submit" class="submit-btn">Submit Application</button>
+        </form>
+
+        <p class="form-note">By submitting this form, you agree to our terms and conditions for assisted applications.</p>
+    </main>
+
+    <footer style="text-align: center; padding: 40px; color: #666; font-size: 14px;">
+        &copy; 2026 Varsity Friend. Empowering your academic journey. by Mabasa Hlawutelo.
+    </footer>
+</body>
+</html>
