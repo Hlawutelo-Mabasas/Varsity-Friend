@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varsity Friend</title>
+    <link rel="icon" type="image/png" href="https://github.com/Hlawutelo-Mabasas/Varsity-Friend/blob/main/icon.png?raw=true">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     <style>
+        /* Specific styles for the Universities page */
+        .university-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .university-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .university-header h1 {
+            color: #002147; /* Navy Blue */
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .university-header p {
+            color: #666;
+            font-size: 18px;
+        }
+
+        /* Search/Filter Bar (Optional placeholder) */
+        .filter-bar {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .university-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .university-table th {
+            background-color: #002147;
+            color: #ffffff;
+            text-align: left;
+            padding: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        .university-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            color: #444;
+            font-size: 15px;
+            vertical-align: middle;
+        }
+
+        .university-table tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        .fee-free {
+            color: #28a745; /* Green */
+            font-weight: bold;
+        }
+
+        .apply-btn {
+            display: inline-block;
+            background-color: #d4af37; /* Gold */
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        .apply-btn:hover {
+            background-color: #b8962d;
+        }
+
+        /* Responsive Table */
+        @media (max-width: 768px) {
+            .university-table thead {
+                display: none;
+            }
+            .university-table, .university-table tbody, .university-table tr, .university-table td {
+                display: block;
+                width: 100%;
+            }
+            .university-table tr {
+                margin-bottom: 20px;
+                border: 1px solid #eee;
+                border-radius: 8px;
+            }
+            .university-table td {
+                text-align: right;
+                padding-left: 50%;
+                position: relative;
+                border-bottom: 1px solid #f1f1f1;
+            }
+            .university-table td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 15px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                text-align: left;
+                font-weight: bold;
+                color: #002147;
+            }
+            .university-table td:last-child {
+                border-bottom: none;
+                text-align: center;
+                padding-left: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="navbar-left">
+            <a href="index.html" class="navbar-brand">
+                <img src="https://github.com/Hlawutelo-Mabasas/Varsity-Friend/blob/main/icon.png?raw=true" alt="Varsity-Friend Logo" class="Logo">
+            </a>
+            <span class="separater"></span>
+            <a href="bursary.html" class="nav-item">Bursaries</a>
+            <span class="separater"></span>
+            <a href="Universities.html" class="nav-item">Universities</a>
+        </div>
+        <div class="navbar-right">
+            <a href="help-apply.html" class="nav-item">Help Apply</a>
+            <span class="separater"></span>
+            <a href="Payment.html" class="nav-item">Payment</a>
+        </div>
+
+    </header>
+    <main class="university-container">
+        <div class="university-header">
+            <h1>South African Universities</h1>
+            <p>Application dates and fees for the 2027 academic year.</p>
+        </div>
+
+        <table class="university-table">
+            <thead>
+                <tr>
+                    <th>University</th>
+                    <th>Opening Date</th>
+                    <th>Closing Date</th>
+                    <th>Application Fee</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="University">University of Johannesburg (UJ)</td>
+                    <td data-label="Opening Date">01 April 2026</td>
+                    <td data-label="Closing Date">31 October 2026</td>
+                    <td data-label="Application Fee" class="fee-free">None</td>
+                    <td><a href="https://www.uj.ac.za/admission-aid/undergraduate/" class="apply-btn" target="_blank">Apply Now</a></td>
+                </tr>
+                <tr>
+                    <td data-label="University">University of Pretoria (UP)</td>
+                    <td data-label="Opening Date">01 April 2026</td>
+                    <td data-label="Closing Date">30 June 2026</td>
+                    <td data-label="Application Fee">R300 (Free if Income &le; R150k)</td>
+                    <td><a href="https://www.up.ac.za/online-application" class="apply-btn" target="_blank">Apply Now</a></td>
+                </tr>
+                <tr>
+                    <td data-label="University">University of Cape Town (UCT)</td>
+                    <td data-label="Opening Date">01 April 2026</td>
+                    <td data-label="Closing Date">31 July 2026</td>
+                    <td data-label="Application Fee">R100</td>
+                    <td><a href="https://uct.ac.za/students/applications-apply-undergraduate-qualifications/application-procedure" class="apply-btn" target="_blank">Apply Now</a></td>
+                </tr>
+                <tr>
+                    <td data-label="University">Wits University</td>
+                    <td data-label="Opening Date">01 March 2026</td>
+                    <td data-label="Closing Date">30 Sept 2026</td>
+                    <td data-label="Application Fee">R100</td>
+                    <td><a href="https://www.wits.ac.za/undergraduate/apply-to-wits/" class="apply-btn" target="_blank">Apply Now</a></td>
+                </tr>
+                <tr>
+                    <td data-label="University">Stellenbosch University</td>
+                    <td data-label="Opening Date">01 April 2026</td>
+                    <td data-label="Closing Date">31 July 2026</td>
+                    <td data-label="Application Fee">R100</td>
+                    <td><a href="https://www.su.ac.za/en/apply/undergrad" class="apply-btn" target="_blank">Apply Now</a></td>
+                </tr>
+                <tr>
+                    <td data-label="University">North-West University (NWU)</td>
+                    <td data-label="Opening Date">01 April 2026</td>
+                    <td data-label="Closing Date">31 August 2026</td>
+                    <td data-label="Application Fee" class="fee-free">None</td>
+                    <td><a href="https://applynow.nwu.ac.za/OnlineApplication/" class="apply-btn" target="_blank">Apply Now</a></td>
+                </tr>
+                <tr>
+                    <td data-label="University">University of the Free State (UFS)</td>
+                    <td data-label="Opening Date">01 April 2026</td>
+                    <td data-label="Closing Date">30 Sept 2026</td>
+                    <td data-label="Application Fee" class="fee-free">None</td>
+                    <td><a href="https://apply.ufs.ac.za/Application/Start" class="apply-btn" target="_blank">Apply Now</a></td>
+                </tr>
+                <tr>
+                    <td data-label="University">Rhodes University</td>
+                    <td data-label="Opening Date">01 April 2026</td>
+                    <td data-label="Closing Date">30 Sept 2026</td>
+                    <td data-label="Application Fee">R100</td>
+                    <td><a href="https://www.ru.ac.za/admissiongateway/" class="apply-btn" target="_blank">Apply Now</a></td>
+                </tr>
+                <tr>
+                    <td data-label="University">University of Fort Hare (UFH)</td>
+                    <td data-label="Opening Date">01 April 2026</td>
+                    <td data-label="Closing Date">30 Sept 2026</td>
+                    <td data-label="Application Fee" class="fee-free">None</td>
+                    <td><a href="https://www.ufh.ac.za/apply/" class="apply-btn" target="_blank">Apply Now</a></td>
+                </tr>
+                <tr>
+                    <td data-label="University">University of the Western Cape (UWC)</td>
+                    <td data-label="Opening Date">01 May 2026</td>
+                    <td data-label="Closing Date">30 Sept 2026</td>
+                    <td data-label="Application Fee" class="fee-free">None</td>
+                    <td><a href="https://www.uwc.ac.za/admission-and-financial-aid/apply/undergraduate-applications" class="apply-btn" target="_blank">Apply Now</a></td>
+                </tr>
+                <tr>
+                    <td data-label="University">Nelson Mandela University (NMU)</td>
+                    <td data-label="Opening Date">01 April 2026</td>
+                    <td data-label="Closing Date">30 Sept 2026</td>
+                    <td data-label="Application Fee" class="fee-free">None</td>
+                    <td><a href="https://www.mandela.ac.za/Study-at-Mandela/Application/Academic-admission" class="apply-btn" target="_blank">Apply Now</a></td>
+                </tr>
+                <tr>
+                    <td data-label="University">UNISA</td>
+                    <td data-label="Opening Date">01 August 2026</td>
+                    <td data-label="Closing Date">10 October 2026</td>
+                    <td data-label="Application Fee">R120</td>
+                    <td><a href="https://www.unisa.ac.za/sites/corporate/default/Apply-for-admission/Undergraduate-qualifications" class="apply-btn" target="_blank">Apply Now</a></td>
+                </tr>
+                <tr>
+                    <td data-label="University">University of Limpopo</td>
+                    <td data-label="Opening Date">01 April 2026</td>
+                    <td data-label="Closing Date">30 Sept 2026</td>
+                    <td data-label="Application Fee">R200</td>
+                    <td><a href="https://www.ul.ac.za/admissions/undergraduate-studies/" class="apply-btn" target="_blank">Apply Now</a></td>
+                </tr>
+                <tr>
+                    <td data-label="University">University of Venda</td>
+                    <td data-label="Opening Date">01 May 2026</td>
+                    <td data-label="Closing Date">25 Sept 2026</td>
+                    <td data-label="Application Fee" class="fee-free">None</td>
+                    <td><a href="https://www.univen.ac.za/students/student-support-services/how-to-apply/apply-online/" class="apply-btn" target="_blank">Apply Now</a></td>
+                </tr>
+                <tr>
+                    <td data-label="University">University of Mpumalanga</td>
+                    <td data-label="Opening Date">01 June 2026</td>
+                    <td data-label="Closing Date">30 Nov 2026</td>
+                    <td data-label="Application Fee">R200</td>
+                    <td><a href="https://www.ump.ac.za/Study-with-us/Application-Process/Online-Applications" class="apply-btn" target="_blank">Apply Now</a></td>
+                </tr>
+                <tr>
+                    <td data-label="University">Sol Plaatje University</td>
+                    <td data-label="Opening Date">01 April 2026</td>
+                    <td data-label="Closing Date">30 Sept 2026</td>
+                    <td data-label="Application Fee" class="fee-free">None</td>
+                    <td><a href="https://www.spu.ac.za/index.php/how-to-apply/" class="apply-btn" target="_blank">Apply Now</a></td>
+                </tr>
+                <tr>
+                    <td data-label="University">Tshwane University of Technology</td>
+                    <td data-label="Opening Date">01 April 2026</td>
+                    <td data-label="Closing Date">30 Sept 2026</td>
+                    <td data-label="Application Fee">R240</td>
+                    <td><a href="https://applications-prod.tut.ac.za/" class="apply-btn" target="_blank">Apply Now</a></td>
+                </tr>
+                <tr>
+                    <td data-label="University">Vaal University of Technology</td>
+                    <td data-label="Opening Date">01 May 2026</td>
+                    <td data-label="Closing Date">30 Sept 2026</td>
+                    <td data-label="Application Fee">R110</td>
+                    <td><a href="https://applications-prod.vut.ac.za/" class="apply-btn" target="_blank">Apply Now</a></td>
+                </tr>
+                <tr>
+                    <td data-label="University">DUT, MUT, UKZN, UNIZULU</td>
+                    <td data-label="Opening Date">01 March 2026</td>
+                    <td data-label="Closing Date">30 Sept 2026</td>
+                    <td data-label="Application Fee">R250 (via CAO)</td>
+                    <td><a href="http://www.cao.ac.za/" class="apply-btn" target="_blank">Apply Now</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer style="text-align: center; padding: 20px; color: #666; font-size: 14px;">
+        &copy; 2026 Varsity Friend. All rights reserved. by Mabasa Hlawutelo.
+    </footer>
+</body>
+</html>
